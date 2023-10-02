@@ -22,7 +22,7 @@ public class RAMTests
 
         public Dummy()
         {
-            for (var i = 0; i < 100; i++)
+            for (var i = 0; i < 10; i++)
             {
                 _innerArray[i] = new string(Inner1KbField);
             }
