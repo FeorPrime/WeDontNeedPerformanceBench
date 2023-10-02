@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>WeDontNeedPeformanceBench.Bench-20231002-170446</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.8, Windows 11 (10.0.22000.2416/21H2/SunValley)
+13th Gen Intel Core i9-13900K, 1 CPU, 32 logical and 24 physical cores
+.NET SDK 7.0.401
+  [Host]     : .NET 7.0.11 (7.0.1123.42427), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.11 (7.0.1123.42427), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method            </th><th>Threads</th><th>A   </th><th>B   </th><th>Mean   </th><th>Error </th><th>StdDev</th><th>Median </th><th>Gen0</th><th>Gen1</th><th>Gen2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>CpuBoundMetricAdd</td><td>100</td><td>9999999999</td><td>4444444444</td><td>27.34 &mu;s</td><td>0.320 &mu;s</td><td>0.300 &mu;s</td><td>27.42 &mu;s</td><td>0.4883</td><td>-</td><td>-</td><td>9.45 KB</td>
+</tr><tr><td>CpuBoundMetricMulti</td><td>100</td><td>9999999999</td><td>4444444444</td><td>26.07 &mu;s</td><td>0.311 &mu;s</td><td>0.291 &mu;s</td><td>26.12 &mu;s</td><td>0.4883</td><td>-</td><td>-</td><td>9.47 KB</td>
+</tr><tr><td>CpuBoundMetricSuperPower</td><td>100</td><td>9999999999</td><td>4444444444</td><td>27.30 &mu;s</td><td>0.330 &mu;s</td><td>0.308 &mu;s</td><td>27.32 &mu;s</td><td>0.4883</td><td>-</td><td>-</td><td>9.44 KB</td>
+</tr><tr><td>CpuBoundMetricSuperRoot</td><td>100</td><td>9999999999</td><td>4444444444</td><td>27.09 &mu;s</td><td>0.244 &mu;s</td><td>0.228 &mu;s</td><td>27.14 &mu;s</td><td>0.4883</td><td>-</td><td>-</td><td>9.49 KB</td>
+</tr><tr><td>RamBoundMetric</td><td>100</td><td>9999999999</td><td>4444444444</td><td>15,843.70 &mu;s</td><td>302.373 &mu;s</td><td>282.840 &mu;s</td><td>15,919.08 &mu;s</td><td>125.0000</td><td>93.7500</td><td>-</td><td>2794.25 KB</td>
+</tr><tr><td>CpuBoundMetricAdd</td><td>1000</td><td>9999999999</td><td>4444444444</td><td>270.58 &mu;s</td><td>5.376 &mu;s</td><td>11.571 &mu;s</td><td>275.69 &mu;s</td><td>4.3945</td><td>0.4883</td><td>-</td><td>86.8 KB</td>
+</tr><tr><td>CpuBoundMetricMulti</td><td>1000</td><td>9999999999</td><td>4444444444</td><td>269.65 &mu;s</td><td>0.764 &mu;s</td><td>0.714 &mu;s</td><td>269.74 &mu;s</td><td>4.3945</td><td>0.4883</td><td>-</td><td>86.76 KB</td>
+</tr><tr><td>CpuBoundMetricSuperPower</td><td>1000</td><td>9999999999</td><td>4444444444</td><td>271.61 &mu;s</td><td>5.273 &mu;s</td><td>7.217 &mu;s</td><td>274.36 &mu;s</td><td>4.3945</td><td>0.4883</td><td>-</td><td>86.8 KB</td>
+</tr><tr><td>CpuBoundMetricSuperRoot</td><td>1000</td><td>9999999999</td><td>4444444444</td><td>283.56 &mu;s</td><td>1.330 &mu;s</td><td>1.244 &mu;s</td><td>283.97 &mu;s</td><td>4.3945</td><td>0.4883</td><td>-</td><td>86.8 KB</td>
+</tr><tr><td>RamBoundMetric</td><td>1000</td><td>9999999999</td><td>4444444444</td><td>30,603.85 &mu;s</td><td>470.521 &mu;s</td><td>440.126 &mu;s</td><td>30,676.11 &mu;s</td><td>1500.0000</td><td>1468.7500</td><td>-</td><td>27938 KB</td>
+</tr><tr><td>CpuBoundMetricAdd</td><td>10000</td><td>9999999999</td><td>4444444444</td><td>2,402.48 &mu;s</td><td>12.509 &mu;s</td><td>11.701 &mu;s</td><td>2,400.09 &mu;s</td><td>78.1250</td><td>74.2188</td><td>39.0625</td><td>959.84 KB</td>
+</tr><tr><td>CpuBoundMetricMulti</td><td>10000</td><td>9999999999</td><td>4444444444</td><td>2,421.67 &mu;s</td><td>46.773 &mu;s</td><td>45.938 &mu;s</td><td>2,443.47 &mu;s</td><td>78.1250</td><td>74.2188</td><td>39.0625</td><td>959.84 KB</td>
+</tr><tr><td>CpuBoundMetricSuperPower</td><td>10000</td><td>9999999999</td><td>4444444444</td><td>2,334.16 &mu;s</td><td>7.264 &mu;s</td><td>6.794 &mu;s</td><td>2,335.51 &mu;s</td><td>78.1250</td><td>74.2188</td><td>39.0625</td><td>959.93 KB</td>
+</tr><tr><td>CpuBoundMetricSuperRoot</td><td>10000</td><td>9999999999</td><td>4444444444</td><td>2,390.97 &mu;s</td><td>12.817 &mu;s</td><td>10.703 &mu;s</td><td>2,393.65 &mu;s</td><td>78.1250</td><td>74.2188</td><td>39.0625</td><td>959.83 KB</td>
+</tr><tr><td>RamBoundMetric</td><td>10000</td><td>9999999999</td><td>4444444444</td><td>111,485.12 &mu;s</td><td>2,157.070 &mu;s</td><td>1,684.098 &mu;s</td><td>111,369.28 &mu;s</td><td>15200.0000</td><td>15000.0000</td><td>-</td><td>279375.63 KB</td>
+</tr></tbody></table>
+</body>
+</html>
