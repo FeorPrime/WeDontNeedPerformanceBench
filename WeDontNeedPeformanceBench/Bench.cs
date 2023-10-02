@@ -33,11 +33,17 @@ public class Bench
         => await CpuTests.Calc(() => _ = Math.Sqrt(A), Threads);
     
     [Benchmark]
-    public async  Task RamBoundMetric()
+    public async  Task RamBoundMetricText()
     {
         await _ram.Create(Threads);
     }
     
+    [Benchmark]
+    public async  Task RamBoundMetricLongArray()
+    {
+        await _ram.CreateArray(Threads);
+    }
+
     // [Benchmark]
     // public async Task IoBoundMetric()
     // {
